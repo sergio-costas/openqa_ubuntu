@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "input_event"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 205,
+      "ypos": 37,
+      "width": 684,
+      "height": 713,
+      "type": "match"
+    }
+  ]
+}

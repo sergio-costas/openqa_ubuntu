@@ -1,0 +1,4 @@
+#!/bin/bash
+source ./env_vars
+
+sudo docker exec -it "${user}"-openqa_worker /usr/share/openqa/script/load_templates --host http://openqa-webui /var/lib/openqa/tests/ubuntu/templates

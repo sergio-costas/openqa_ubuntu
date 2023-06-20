@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "calendar_done"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 838,
+      "ypos": 40,
+      "width": 37,
+      "height": 18,
+      "type": "match"
+    }
+  ]
+}

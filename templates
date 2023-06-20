@@ -1,0 +1,49 @@
+{
+  JobTemplates => [
+                    {
+                      group_name => "Ubuntu 23.04",
+                      machine => { name => "64bit" },
+                      prio => 50,
+                      product => {
+                        arch    => "amd64",
+                        distri  => "ubuntu",
+                        flavor  => "desktop",
+                        group   => "ubuntu-23.04-desktop",
+                        version => "23.04",
+                      },
+                      test_suite => { name => "tim_test" },
+                    },
+                  ],
+  Machines     => [
+                    {
+                      backend => "qemu",
+                      name => "64bit",
+                      settings => [
+                        { key => "CDMODEL", value => "ide-cd" },
+                        { key => "HDDSIZEGB", value => 25 },
+                        { key => "QEMUCPU", value => "Haswell-noTSX" },
+                        { key => "QEMUCPUS", value => 1 },
+                        { key => "QEMURAM", value => 2048 },
+                        { key => "QEMUVGA", value => "qxl" },
+                        { key => "WORKER_CLASS", value => "qemu_x86_64" },
+                      ],
+                    },
+                  ],
+  Products     => [
+                    {
+                      arch     => "amd64",
+                      distri   => "ubuntu",
+                      flavor   => "desktop",
+                      settings => [
+                                    { key => "ISO", value => "ubuntu-23.04-desktop-amd64.iso" },
+                                  ],
+                      version  => "23.04",
+                    },
+                  ],
+  TestSuites   => [
+                    {
+                      name => "tim_test",
+                      settings => [{ key => "INSTALL_TYPE", value => "tim_test" }],
+                    },
+                  ],
+}

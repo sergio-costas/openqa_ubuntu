@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "width": 12,
+      "type": "match",
+      "xpos": 288,
+      "ypos": 419,
+      "height": 15
+    }
+  ],
+  "tags": [
+    "try_ubuntu_btn23_04"
+  ],
+  "properties": []
+}

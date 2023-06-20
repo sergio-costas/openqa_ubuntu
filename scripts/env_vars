@@ -1,0 +1,4 @@
+export user="tim"
+export webport="41"
+export rsyncport="873"
+export sslport="443"
