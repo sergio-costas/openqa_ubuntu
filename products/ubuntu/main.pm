@@ -37,7 +37,7 @@ init_main();
 #     loadtest 'gnome/shutdown';
 # }
 
-if (check_var('INSTALL_TYPE', 'tim_test')) {
+if (check_var('TEST_APP', 'calendar')) {
     loadtest 'installation/boot';
     loadtest 'installation/welcome';
     loadtest 'installation/try_ubuntu';

@@ -8,7 +8,7 @@ You must have docker installed for this to work.
 
 kvm must also be working on your machine. As a hack, I run `sudo chmod 666 /dev/kvm`.
 
-There are scripts to help running the tests.
+There are scripts to help running the tests. Please run them from the `scripts` directory.
 
 To run, navigate to the `scripts` directory, and run `sudo ./start_containers`.
 

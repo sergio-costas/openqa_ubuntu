@@ -11,7 +11,7 @@
                         group   => "ubuntu-23.04-desktop",
                         version => "23.04",
                       },
-                      test_suite => { name => "tim_test" },
+                      test_suite => { name => "calendar" },
                     },
                   ],
   Machines     => [
@@ -42,8 +42,8 @@
                   ],
   TestSuites   => [
                     {
-                      name => "tim_test",
-                      settings => [{ key => "INSTALL_TYPE", value => "tim_test" }],
+                      name => "calendar",
+                      settings => [{ key => "TEST_APP", value => "calendar" }],
                     },
                   ],
 }
