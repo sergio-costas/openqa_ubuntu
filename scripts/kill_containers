@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sudo docker rm -f tim-openqa_worker tim-openqa_webui
+
+sudo rm -r /var/lib/docker/volumes/tim-*

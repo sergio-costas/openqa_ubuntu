@@ -38,11 +38,11 @@ init_main();
 # }
 
 if (check_var('INSTALL_TYPE', 'tim_test')) {
-    loadtest 'installation/boot23_04';
-    loadtest 'installation/welcome23_04';
-    loadtest 'installation/try_ubuntu23_04';
+    loadtest 'installation/boot';
+    loadtest 'installation/welcome';
+    loadtest 'installation/try_ubuntu';
     loadtest 'applications/gnome_calendar';
-    loadtest 'installation/shutdown23_04';
+    loadtest 'installation/shutdown';
 }
 
 # if (check_var('TEST_TYPE', 'GUI')) {
