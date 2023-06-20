@@ -27,6 +27,14 @@ sub run {
     assert_and_click 'next23_04';
     assert_screen 'setup1', 200;
     assert_and_click 'setup1click';
+    assert_screen 'languagescreen', 100;
+    assert_and_click 'next23_04';
+    assert_screen 'setup3', 100;
+    assert_and_click 'next23_04';
+    assert_screen 'setup4', 100;
+    assert_and_click 'next23_04';
+    assert_screen 'setup5', 100;
+    assert_and_click 'install_button';
 
 }
 

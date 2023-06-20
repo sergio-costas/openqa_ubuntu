@@ -1,0 +1,15 @@
+{
+  "properties": [],
+  "tags": [
+    "install_button"
+  ],
+  "area": [
+    {
+      "xpos": 864,
+      "ypos": 689,
+      "width": 78,
+      "height": 21,
+      "type": "match"
+    }
+  ]
+}
