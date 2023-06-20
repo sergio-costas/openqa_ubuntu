@@ -11,7 +11,20 @@
                         group   => "ubuntu-23.04-desktop",
                         version => "23.04",
                       },
-                      test_suite => { name => "calendar" },
+                      test_suite => { name => "apps" },
+                    },
+                    {
+                      group_name => "Ubuntu 23.04",
+                      machine => { name => "64bit" },
+                      prio => 50,
+                      product => {
+                        arch    => "amd64",
+                        distri  => "ubuntu",
+                        flavor  => "desktop",
+                        group   => "ubuntu-23.04-desktop",
+                        version => "23.04",
+                      },
+                      test_suite => { name => "try_live" },
                     },
                   ],
   Machines     => [
@@ -42,8 +55,12 @@
                   ],
   TestSuites   => [
                     {
-                      name => "calendar",
-                      settings => [{ key => "TEST_APP", value => "calendar" }],
+                      name => "apps",
+                      settings => [{ key => "TEST_APP", value => "all" }],
+                    },
+                    {
+                      name => "try_live",
+                      settings => [{ key => "INSTALL_TYPE", value => "try" }],
                     },
                   ],
 }

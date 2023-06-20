@@ -14,12 +14,12 @@ use main_common;
 init_main();
 
 # LiveDVD try out environment
-# if (check_var('INSTALL_TYPE', 'try')) {
-#     loadtest 'installation/boot';
-#     loadtest 'installation/welcome';
-#     loadtest 'installation/try_ubuntu';
-#     loadtest 'gnome/shutdown';
-# }
+if (check_var('INSTALL_TYPE', 'try')) {
+    loadtest 'installation/boot';
+    loadtest 'installation/try_ubuntu';
+    loadtest 'installation/assert_try_desktop';
+    loadtest 'utils/shutdown';
+}
 
 # Graphical Installation from the DVD
 # if (check_var('INSTALL_TYPE', 'install')) {
@@ -37,7 +37,7 @@ init_main();
 #     loadtest 'gnome/shutdown';
 # }
 
-if (check_var('TEST_APP', 'calendar')) {
+if (check_var('TEST_APP', 'all')) {
     loadtest 'installation/boot';
     loadtest 'installation/try_ubuntu';
     loadtest 'installation/assert_try_desktop';
