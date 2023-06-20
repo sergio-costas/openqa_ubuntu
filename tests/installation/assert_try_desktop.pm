@@ -13,18 +13,17 @@
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, see <http://www.gnu.org/licenses/>.
 
+#use base "opensusebasetest";
 use base 'basetest';
 use strict;
 use testapi;
-
 sub run {
 
-    # Select between 'Try' or 'Installation'
-    # assert_and_click 'try_ubuntu_btn23_04' if check_var('INSTALL_TYPE', 'try');
-    assert_screen 'try_or_install23_04', 200;
-    assert_and_click 'try_ubuntu_btn23_04';
-    # assert_and_click 'install_ubuntu_btn23_04' if check_var('INSTALL_TYPE', 'install');
-    assert_and_click 'next23_04';
+    # Verify that Live GNOME environment has been loaded
+    assert_screen 'generic_desktop23_04', 100;
+
+    # Hide the mouse cursor
+    mouse_hide;
 
 }
 

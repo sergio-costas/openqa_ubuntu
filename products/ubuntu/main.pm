@@ -39,8 +39,8 @@ init_main();
 
 if (check_var('TEST_APP', 'calendar')) {
     loadtest 'installation/boot';
-    loadtest 'installation/welcome';
     loadtest 'installation/try_ubuntu';
+    loadtest 'installation/assert_try_desktop';
     loadtest 'applications/gnome_calendar';
     loadtest 'utils/shutdown';
 }
