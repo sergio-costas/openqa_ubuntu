@@ -42,7 +42,7 @@ if (check_var('INSTALL_TYPE', 'tim_test')) {
     loadtest 'installation/welcome';
     loadtest 'installation/try_ubuntu';
     loadtest 'applications/gnome_calendar';
-    loadtest 'installation/shutdown';
+    loadtest 'utils/shutdown';
 }
 
 # if (check_var('TEST_TYPE', 'GUI')) {

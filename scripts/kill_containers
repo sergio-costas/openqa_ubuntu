@@ -1,5 +1,7 @@
 #!/bin/bash
 
-sudo docker rm -f tim-openqa_worker tim-openqa_webui
+source ./env_vars
 
-sudo rm -r /var/lib/docker/volumes/tim-*
+sudo docker rm -f "${user}"-openqa_worker "${user}"-openqa_webui
+
+sudo rm -r /var/lib/docker/volumes/"${user}"-*
