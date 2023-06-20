@@ -21,9 +21,13 @@ if (check_var('INSTALL_TYPE', 'try')) {
     loadtest 'utils/shutdown';
 }
 
+if (check_var('INSTALL_TYPE', 'install')) {
+    loadtest 'installation/boot';
+    loadtest 'installation/install_ubuntu';
+}
+
 # Graphical Installation from the DVD
 # if (check_var('INSTALL_TYPE', 'install')) {
-# 	# loadtest 'installation/dummy_test';
 #     loadtest 'installation/boot';
 #     loadtest 'installation/welcome';
 #     loadtest 'installation/preparing';
