@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "installed_after_reboot"
+  ],
+  "area": [
+    {
+      "xpos": 242,
+      "ypos": 239,
+      "width": 495,
+      "height": 508,
+      "type": "match"
+    }
+  ],
+  "properties": []
+}

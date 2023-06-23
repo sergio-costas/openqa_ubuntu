@@ -5,3 +5,4 @@ source ./env_vars
 sudo docker rm -f "${user}"-openqa_worker "${user}"-openqa_webui
 
 sudo rm -r /var/lib/docker/volumes/"${user}"-*
+sudo systemctl restart docker.service

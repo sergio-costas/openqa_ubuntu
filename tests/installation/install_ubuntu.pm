@@ -17,6 +17,8 @@ use base 'basetest';
 use strict;
 use testapi;
 
+use constant SLOW_TYPING_SPEED => 13;
+
 sub run {
 
     # Select between 'Try' or 'Installation'
@@ -35,6 +37,31 @@ sub run {
     assert_and_click 'next23_04';
     assert_screen 'setup5', 100;
     assert_and_click 'install_button';
+    assert_screen 'timezone', 100;
+    assert_and_click 'uk', 100;
+    assert_and_click 'next23_04';
+    assert_screen 'login_info', 100;
+    type_string 'ubuntu', SLOW_TYPING_SPEED;
+    send_key 'tab';
+    send_key 'tab';
+    type_string 'ubuntu', SLOW_TYPING_SPEED;
+    send_key 'tab';
+    type_string 'ubuntu', SLOW_TYPING_SPEED;
+    send_key 'tab';
+    send_key 'tab';
+    type_string 'ubuntu', SLOW_TYPING_SPEED;
+    assert_and_click 'next23_04';
+    assert_screen 'theme_screen', 100;
+    assert_and_click 'next23_04';
+    assert_screen 'installed_screen', 1800;
+    assert_and_click 'installed_restart';
+    assert_screen 'reboot', 200;
+    send_key 'ret';
+    assert_screen 'installed_after_reboot', 200;
+    send_key 'ret';
+    type_string 'ubuntu', SLOW_TYPING_SPEED;
+    send_key 'ret';
+    assert_screen 'installed_desktop', 200;
 
 }
 
