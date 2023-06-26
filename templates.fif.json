@@ -1,0 +1,43 @@
+{
+    "Machines":{
+        "64bit":{
+            "backend":"qemu",
+            "settings":{
+                "CDMODEL": "ide-cd",
+                "HDDSIZEGB": 25,
+                "QEMUCPU": "Haswell-noTSX",
+                "QEMUCPUS": 1,
+                "QEMURAM": 2048,
+                "QEMUVGA": "qx1",
+                "WORKER_CLASS": "qemu_x86_64"
+            }
+        }
+    },
+    "Products":{
+        "ubuntu-23.04-desktop-amd64.iso":{
+            "arch": "amd64",
+            "distri": "ubuntu",
+            "flavor": "desktop",
+            "settings":{
+                "ISO": "ubuntu-23.04-desktop-amd64.iso"
+            },
+            "version": "23.04"
+        }
+    },
+    "Profiles":{
+        "ubuntu-23.04-desktop-amd64.iso":{
+            "machine": "64bit",
+            "product": "ubuntu-23.04-desktop-amd64.iso"
+        }
+    },
+    "TestSuites":{
+        "install_try":{
+            "profiles":{
+                "ubuntu-23.04-desktop-amd64.iso": 20
+            },
+            "settings":{
+                "INSTALL_TYPE": "try"
+            }
+        }
+    }
+}
