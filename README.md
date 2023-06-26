@@ -5,6 +5,9 @@ This is a repo for openqa testing of ubuntu desktop applications and installer t
 A lot of the inspiration for this repo came from `https://github.com/drpaneas/ubuntu_qa`.
 
 You must have docker installed for this to work.
+```
+curl -sSL https://get.docker.com/ | sudo sh
+```
 
 kvm must also be working on your machine. As a hack, I run `sudo chmod 666 /dev/kvm`.
 
