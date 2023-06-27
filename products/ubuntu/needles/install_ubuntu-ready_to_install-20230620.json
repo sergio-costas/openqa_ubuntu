@@ -1,13 +1,13 @@
 {
   "tags": [
-    "setup4"
+    "ready_to_install"
   ],
   "area": [
     {
       "xpos": 43,
-      "ypos": 70,
-      "width": 941,
-      "height": 654,
+      "ypos": 67,
+      "width": 940,
+      "height": 664,
       "type": "match"
     }
   ],
