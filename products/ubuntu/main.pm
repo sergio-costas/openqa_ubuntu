@@ -23,7 +23,8 @@ if (check_var('INSTALL_TYPE', 'try')) {
 
 if (check_var('INSTALL_TYPE', 'install')) {
     loadtest 'installation/boot';
-    loadtest 'installation/install_ubuntu';
+    # loadtest 'installation/install_ubuntu';
+    loadtest 'installation/install_manual_partitioning';
 }
 
 # Graphical Installation from the DVD

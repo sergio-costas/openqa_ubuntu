@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "manual_partitioning_checkbox"
+  ],
+  "area": [
+    {
+      "xpos": 62,
+      "ypos": 304,
+      "width": 13,
+      "height": 13,
+      "type": "match"
+    }
+  ],
+  "properties": []
+}

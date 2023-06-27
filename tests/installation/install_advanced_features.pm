@@ -34,6 +34,14 @@ sub run {
     assert_screen 'applications_and_updates', 100;
     assert_and_click 'next23_04';
     assert_screen 'installation_type', 100;
+    # add manual partitioning here
+    assert_and_click 'advanced_features';
+    assert_screen 'advanced_features_options', 100;
+    assert_and_click 'use_lvm';
+    assert_screen 'advanced_features_lvm_clicked', 100;
+
+
+
     assert_and_click 'next23_04';
     assert_screen 'ready_to_install', 100;
     assert_and_click 'install_button';

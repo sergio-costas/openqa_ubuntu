@@ -1,0 +1,15 @@
+{
+  "properties": [],
+  "tags": [
+    "partitioning_menu"
+  ],
+  "area": [
+    {
+      "xpos": 43,
+      "ypos": 66,
+      "width": 945,
+      "height": 101,
+      "type": "match"
+    }
+  ]
+}

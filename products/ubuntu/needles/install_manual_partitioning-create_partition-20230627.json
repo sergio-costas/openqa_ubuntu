@@ -1,0 +1,15 @@
+{
+  "properties": [],
+  "area": [
+    {
+      "xpos": 248,
+      "ypos": 249,
+      "width": 534,
+      "height": 48,
+      "type": "match"
+    }
+  ],
+  "tags": [
+    "create_partition"
+  ]
+}
