@@ -21,7 +21,8 @@
             "settings":{
                 "ISO": "ubuntu-23.04-desktop-amd64.iso"
             },
-            "version": "23.04"
+            "version": "23.04",
+            "name": "group1"
         }
     },
     "Profiles":{

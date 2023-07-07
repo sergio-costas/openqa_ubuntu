@@ -74,13 +74,18 @@ def generate_job_templates(products, profiles, testsuites):
         for (profile, prio) in suite['profiles'].items():
             jobtemplate = {'test_suite_name': name, 'prio': prio}
             # x86_64 compose
-            jobtemplate['group_name'] = 'fedora'
+            # jobtemplate['group_name'] = 'fedora'
+            # This group name isn't ideal. Ideally the groups would be split up on kind of tests
+            # e.g. installer tests or desktop applications tests or something.
+            # jobtemplate['group_name'] = 'ubuntu'
             jobtemplate['machine_name'] = profiles[profile]['machine']
             product = products[profiles[profile]['product']]
             jobtemplate['arch'] = product['arch']
             jobtemplate['flavor'] = product['flavor']
             jobtemplate['distri'] = product['distri']
             jobtemplate['version'] = product['version']
+            jobtemplate['group_name'] = product['name']
+            # if block not needed by the looks. (for our version)
             if jobtemplate['machine_name'] == 'ppc64le':
                 if 'updates' in product['flavor']:
                     jobtemplate['group_name'] = "Fedora PowerPC Updates"
@@ -107,6 +112,7 @@ def reverse_qol(machines, products, testsuites):
     """
     # first, some nested convenience functions
     def to_list_of_dicts(datadict):
+        # lol
         """Convert our nice dicts to upstream's stupid list-of-dicts-with
         -name-keys.
         """
@@ -117,6 +123,7 @@ def reverse_qol(machines, products, testsuites):
         return converted
 
     def dumb_settings(settdict):
+        # lol
         """Convert our sensible settings dicts to upstream's weird-ass
         list-of-dicts format.
         """
@@ -153,7 +160,6 @@ def parse_args(args):
         action='store_true')
     parser.add_argument(
         '--loader', help="Loader to use with --load",
-        # default="/usr/share/openqa/script/load_templates")
         default="/usr/share/openqa/script/load_templates")
     parser.add_argument(
         '-w', '--write', help="Write the generated templates in JSON "
