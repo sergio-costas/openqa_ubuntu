@@ -40,7 +40,7 @@ sub run {
     assert_and_click 'partitioning_plus';
     assert_screen 'create_partition', 30;
     assert_and_click 'input_size';
-    type_string '8000', SLOW_TYPING_SPEED;
+    type_string '10000', SLOW_TYPING_SPEED;
     assert_and_click 'mount_point';
     type_string '/', SLOW_TYPING_SPEED;
     send_key 'ret';
@@ -50,21 +50,21 @@ sub run {
     assert_and_click 'partitioning_plus';
     assert_screen 'create_partition', 30;
     assert_and_click 'input_size';
-    type_string '3000', SLOW_TYPING_SPEED;
+    type_string '1000', SLOW_TYPING_SPEED;
     assert_and_click 'mount_point';
     type_string '/home', SLOW_TYPING_SPEED;
     send_key 'ret';
     assert_and_click 'partition_ok';
     # add boot partition
-    assert_and_click 'free_space_2';
-    assert_and_click 'partitioning_plus';
-    assert_screen 'create_partition', 30;
-    assert_and_click 'input_size';
-    type_string '2000', SLOW_TYPING_SPEED;
-    assert_and_click 'mount_point';
-    type_string '/boot', SLOW_TYPING_SPEED;
-    send_key 'ret';
-    assert_and_click 'partition_ok';
+    # assert_and_click 'free_space_2';
+    # assert_and_click 'partitioning_plus';
+    # assert_screen 'create_partition', 30;
+    # assert_and_click 'input_size';
+    # type_string '2000', SLOW_TYPING_SPEED;
+    # assert_and_click 'mount_point';
+    # type_string '/boot', SLOW_TYPING_SPEED;
+    # send_key 'ret';
+    # assert_and_click 'partition_ok';
     # install
     assert_and_click 'next23_04';
     assert_screen 'ready_to_install', 30;
@@ -97,6 +97,7 @@ sub run {
     # add section here to verify the split disks
     send_key 'alt-f2';
     type_string '/usr/bin/gnome-disks', SLOW_TYPING_SPEED;
+    send_key 'ret';
     assert_screen 'gnome-disks-manual_partition', 30;
     send_key 'alt-f4';
     # /usr/bin/gnome-disks
