@@ -39,6 +39,22 @@
             "settings":{
                 "INSTALL_TYPE": "try"
             }
+        },
+        "install_tests":{
+            "profiles":{
+                "ubuntu-23.04-desktop-amd64.iso": 20
+            },
+            "settings":{
+                "INSTALL_TYPE": "install"
+            }
+        },
+        "calendar":{
+            "profiles":{
+                "ubuntu-23.04-desktop-amd64.iso": 20
+            },
+            "settings":{
+                "TEST_APP": "calendar"
+            }
         }
     }
 }

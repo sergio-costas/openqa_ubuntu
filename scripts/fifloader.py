@@ -203,6 +203,7 @@ def run(args):
     if args.write:
         # write generated output to given filename
         with open(args.filename, 'w') as outfh:
+            # for some reason, this replacement is needed.
             outfh.write(json.dumps(out, indent=4).replace(":", " =>"))
             # original
             # json.dump(out, outfh, indent=4)

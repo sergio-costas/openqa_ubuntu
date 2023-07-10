@@ -50,6 +50,14 @@ if (check_var('TEST_APP', 'all')) {
     loadtest 'utils/shutdown';
 }
 
+if (check_var('TEST_APP', 'calendar')) {
+    loadtest 'installation/boot';
+    loadtest 'installation/try_ubuntu';
+    loadtest 'installation/assert_try_desktop';
+    loadtest 'applications/gnome_calendar';
+    loadtest 'utils/shutdown';
+}
+
 # if (check_var('TEST_TYPE', 'GUI')) {
 #     loadtest 'gnome/gdm';
 #     loadtest 'gnome/shutdown';
