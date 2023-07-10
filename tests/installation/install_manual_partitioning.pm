@@ -99,6 +99,8 @@ sub run {
     type_string '/usr/bin/gnome-disks', SLOW_TYPING_SPEED;
     send_key 'ret';
     assert_screen 'gnome-disks-manual_partition', 30;
+    assert_and_click 'hard_disk';
+    assert_screen 'hard_disk_info', 30;
     send_key 'alt-f4';
     # /usr/bin/gnome-disks
 }
