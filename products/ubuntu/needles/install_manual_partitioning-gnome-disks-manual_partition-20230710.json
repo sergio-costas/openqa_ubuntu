@@ -1,0 +1,15 @@
+{
+  "properties": [],
+  "area": [
+    {
+      "xpos": 125,
+      "ypos": 84,
+      "width": 885,
+      "height": 572,
+      "type": "match"
+    }
+  ],
+  "tags": [
+    "gnome-disks-manual_partition"
+  ]
+}
