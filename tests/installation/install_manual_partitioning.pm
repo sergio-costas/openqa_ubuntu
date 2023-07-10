@@ -50,7 +50,7 @@ sub run {
     assert_and_click 'partitioning_plus';
     assert_screen 'create_partition', 30;
     assert_and_click 'input_size';
-    type_string '1000', SLOW_TYPING_SPEED;
+    type_string '10000', SLOW_TYPING_SPEED;
     assert_and_click 'mount_point';
     type_string '/home', SLOW_TYPING_SPEED;
     send_key 'ret';
@@ -85,7 +85,7 @@ sub run {
     assert_and_click 'next23_04';
     assert_screen 'theme_screen', 30;
     assert_and_click 'next23_04';
-    assert_screen 'installed_screen', 1800;
+    assert_screen 'installed_screen', 2600;
     assert_and_click 'installed_restart';
     assert_screen 'reboot', 200;
     send_key 'ret';
