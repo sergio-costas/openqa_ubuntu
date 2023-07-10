@@ -8,7 +8,7 @@
                 "QEMUCPU": "Haswell-noTSX",
                 "QEMUCPUS": 1,
                 "QEMURAM": 2048,
-                "QEMUVGA": "qx1",
+                "QEMUVGA": "qxl",
                 "WORKER_CLASS": "qemu_x86_64"
             }
         }

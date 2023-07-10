@@ -14,4 +14,4 @@ cp -b -r ../ /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/
 cp -b $path_to_iso /var/lib/docker/volumes/"${user}"-Assets/_data/iso/
 chown -R 496:nogroup /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/products/ubuntu/needles
 chmod -R 777 /var/lib/docker/volumes/"${user}"-Assets/_data/
-# ./fifloader.py -w ../templates.fif.json --filename /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/templates
+./fifloader.py -w ../templates.fif.json --filename /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/templates
