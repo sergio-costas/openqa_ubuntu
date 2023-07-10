@@ -1,0 +1,76 @@
+{
+    "JobTemplates" => [
+        {
+            "test_suite_name" => "install_try",
+            "prio" => 20,
+            "machine_name" => "64bit",
+            "arch" => "amd64",
+            "flavor" => "desktop",
+            "distri" => "ubuntu",
+            "version" => "23.04",
+            "group_name" => "group1"
+        }
+    ],
+    "Machines" => [
+        {
+            "backend" => "qemu",
+            "settings" => [
+                {
+                    "key" => "CDMODEL",
+                    "value" => "ide-cd"
+                },
+                {
+                    "key" => "HDDSIZEGB",
+                    "value" => 25
+                },
+                {
+                    "key" => "QEMUCPU",
+                    "value" => "Haswell-noTSX"
+                },
+                {
+                    "key" => "QEMUCPUS",
+                    "value" => 1
+                },
+                {
+                    "key" => "QEMURAM",
+                    "value" => 2048
+                },
+                {
+                    "key" => "QEMUVGA",
+                    "value" => "qx1"
+                },
+                {
+                    "key" => "WORKER_CLASS",
+                    "value" => "qemu_x86_64"
+                }
+            ],
+            "name" => "64bit"
+        }
+    ],
+    "Products" => [
+        {
+            "arch" => "amd64",
+            "distri" => "ubuntu",
+            "flavor" => "desktop",
+            "settings" => [
+                {
+                    "key" => "ISO",
+                    "value" => "ubuntu-23.04-desktop-amd64.iso"
+                }
+            ],
+            "version" => "23.04",
+            "name" => "ubuntu-23.04-desktop-amd64.iso"
+        }
+    ],
+    "TestSuites" => [
+        {
+            "settings" => [
+                {
+                    "key" => "INSTALL_TYPE",
+                    "value" => "try"
+                }
+            ],
+            "name" => "install_try"
+        }
+    ]
+}

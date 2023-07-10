@@ -1,6 +1,32 @@
 {
   JobTemplates => [
                     {
+                      group_name => "Ubuntu 23.04 app testing",
+                      machine => { name => "64bit" },
+                      prio => 50,
+                      product => {
+                        arch    => "amd64",
+                        distri  => "ubuntu",
+                        flavor  => "desktop",
+                        group   => "ubuntu-23.04-desktop-app-testing",
+                        version => "23.04",
+                      },
+                      test_suite => { name => "apps" },
+                    },
+                    {
+                      group_name => "Ubuntu 23.04 try test",
+                      machine => { name => "64bit" },
+                      prio => 50,
+                      product => {
+                        arch    => "amd64",
+                        distri  => "ubuntu",
+                        flavor  => "desktop",
+                        group   => "ubuntu-23.04-desktop-try-test",
+                        version => "23.04",
+                      },
+                      test_suite => { name => "try_live" },
+                    },
+                    {
                       group_name => "Ubuntu 23.04 install tests",
                       machine => { name => "64bit" },
                       prio => 50,
