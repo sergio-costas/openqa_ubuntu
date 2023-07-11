@@ -81,7 +81,7 @@ import sys
 
 import jsonschema
 
-SCHEMAPATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), '/schemas')
+SCHEMAPATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../schemas')
 
 def schema_validate(instance, fif=True, complete=True, schemapath=SCHEMAPATH):
     """Validate some input against one of our JSON schemas. We have
@@ -199,13 +199,14 @@ def generate_job_templates(products, profiles, testsuites):
         for (profile, prio) in suite['profiles'].items():
             jobtemplate = {'test_suite_name': name, 'prio': prio}
             # x86_64 compose
-            jobtemplate['group_name'] = 'fedora'
+            # jobtemplate['group_name'] = 'fedora'
             jobtemplate['machine_name'] = profiles[profile]['machine']
             product = products[profiles[profile]['product']]
             jobtemplate['arch'] = product['arch']
             jobtemplate['flavor'] = product['flavor']
             jobtemplate['distri'] = product['distri']
             jobtemplate['version'] = product['version']
+            jobtemplate['group_name'] = product['name']
             if jobtemplate['machine_name'] == 'ppc64le':
                 if 'updates' in product['flavor']:
                     jobtemplate['group_name'] = "Fedora PowerPC Updates"
@@ -328,7 +329,10 @@ def run(args):
     if args.write:
         # write generated output to given filename
         with open(args.filename, 'w') as outfh:
-            json.dump(out, outfh, indent=4)
+            x = json.dumps(out, indent=4)
+            outfh.write(x.replace(":", "=>"))
+            # json.dump(out, outfh, indent=4)
+            # json.dump(out.replace(":", "=>"), outfh, indent=4)
     if args.load:
         # load generated output with given loader (defaults to
         # /usr/share/openqa/script/load_templates)
