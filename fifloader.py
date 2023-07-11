@@ -81,7 +81,7 @@ import sys
 
 import jsonschema
 
-SCHEMAPATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../schemas')
+SCHEMAPATH = os.path.join(os.path.dirname(os.path.realpath(__file__)), '/schemas')
 
 def schema_validate(instance, fif=True, complete=True, schemapath=SCHEMAPATH):
     """Validate some input against one of our JSON schemas. We have
@@ -328,10 +328,7 @@ def run(args):
     if args.write:
         # write generated output to given filename
         with open(args.filename, 'w') as outfh:
-            x = json.dumps(out, indent=4)
-            outfh.write(x.replace(":", "=>"))
-            # json.dump(out, outfh, indent=4)
-            # json.dump(out.replace(":", "=>"), outfh, indent=4)
+            json.dump(out, outfh, indent=4)
     if args.load:
         # load generated output with given loader (defaults to
         # /usr/share/openqa/script/load_templates)
