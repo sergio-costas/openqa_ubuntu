@@ -69,13 +69,12 @@ sub run {
     assert_and_click 'installed_restart';
     assert_screen 'reboot', 200;
     send_key 'ret';
-    assert_screen 'reboot2', 200;
-    send_key 'ret';
     assert_screen 'installed_after_reboot', 1000;
     send_key 'ret';
     type_string 'ubuntu', SLOW_TYPING_SPEED;
     send_key 'ret';
     assert_screen 'installed_desktop', 200;
+    assert_screen 'online_accounts', 200;
     assert_and_click 'disk icon';
     assert_screen 'disk_icon_gui', 30;
     # add section here to verify the split disks
