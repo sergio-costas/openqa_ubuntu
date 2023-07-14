@@ -1,0 +1,65 @@
+# mini iso
+6000 ram
+2 cpus
+
+40G disk
+
+## installation
+1 - choose an ubuntu version to install
+  - enter
+2 - choose ubuntu version
+  - choose version - up/down (down 2 to lunar, enter)
+3 - welcome - choose language
+  - enter
+4 - new installer ?
+  - continue without updating - press enter
+5 - keyboard
+  - enter
+6 - choose type of install
+  - ubuntu server, pre-selected, press enter
+7 - network connections
+  - enter
+8 - proxy address
+  - enter
+9 - configure mirror
+  - wait for passed tests, enter
+10 - storage config
+  - default, entire disk
+  - 5 down
+11 - storage config summary
+  - enter
+12 - confirm destructive action
+  - down
+  - enter
+13 - profile setup
+  - type ubuntu
+  - tab
+  - type ubuntu
+  - tab
+  - type ubuntu
+  - tab
+  - type ubuntu
+  - tab
+  - type ubuntu
+  - enter
+14 - openssh server 
+  - enter
+  - down
+  - down
+15 - featured snaps
+  - tab
+  - enter
+it's now installing ...
+16 - install complete
+  - tab
+  - tab
+  - enter
+waiting for reboot
+17 - used fallback datasource
+  - enter
+  - type ubuntu
+  - enter
+  - type ubuntu
+  - enter
+18 - logged in page
+
