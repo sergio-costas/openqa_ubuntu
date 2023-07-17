@@ -6,8 +6,8 @@
                 "CDMODEL": "ide-cd",
                 "HDDSIZEGB": 25,
                 "QEMUCPU": "Haswell-noTSX",
-                "QEMUCPUS": 4,
-                "QEMURAM": 3000,
+                "QEMUCPUS": 2,
+                "QEMURAM": 6000,
                 "QEMUVGA": "qxl",
                 "WORKER_CLASS": "qemu_x86_64"
             }
