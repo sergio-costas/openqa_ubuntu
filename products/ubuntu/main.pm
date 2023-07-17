@@ -29,7 +29,6 @@ if (check_var('INSTALL_TYPE', 'install')) {
 }
 
 if (check_var('INSTALL_TYPE', 'mini')) {
-    loadtest 'installation/boot';
     loadtest 'installation/install_mini_iso';
 }
 
