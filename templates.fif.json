@@ -32,7 +32,7 @@
         }
     },
     "TestSuites":{
-        "install_tests":{
+        "install_test":{
             "profiles":{
                 "mantic-mini-iso-amd64.iso": 20
             },

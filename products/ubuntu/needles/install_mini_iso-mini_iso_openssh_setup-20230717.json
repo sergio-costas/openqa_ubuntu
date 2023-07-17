@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 58,
+      "ypos": 2,
+      "width": 864,
+      "height": 330,
+      "type": "match"
+    }
+  ],
+  "tags": [
+    "mini_iso_openssh_setup"
+  ],
+  "properties": []
+}

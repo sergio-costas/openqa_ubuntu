@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "mini_iso_confirm_destructive_action"
+  ],
+  "area": [
+    {
+      "xpos": 235,
+      "ypos": 288,
+      "width": 565,
+      "height": 202,
+      "type": "match"
+    }
+  ],
+  "properties": []
+}

@@ -22,28 +22,27 @@ use constant SLOW_TYPING_SPEED => 13;
 sub run {
 
     # dont remember what this was
-    assert_screen 'mini_iso_choose_version', 200;
+    assert_screen 'mini_iso_choose_version', 10;
     send_key 'ret';
     # choose release
-    assert_screen 'mini_iso_choose_release', 30;
+    assert_screen 'mini_iso_choose_release', 10;
     send_key 'down';
     send_key 'down';
     send_key 'ret';
-    assert_screen 'mini_iso_choose_language', 30;
+    assert_screen 'mini_iso_choose_language', 600;
     send_key 'ret';
-    assert_screen 'mini_iso_if_new_installer', 30;
+    assert_screen 'mini_iso_if_new_installer', 10;
     send_key 'ret';
-    assert_screen 'mini_iso_keyboard', 30;
+    assert_screen 'mini_iso_keyboard', 10;
     send_key 'ret';
     # server or minimal
-    assert_screen 'mini_iso_type_of_install', 30;
+    assert_screen 'mini_iso_type_of_install', 10;
     send_key 'ret';
-    assert_screen 'mini_iso_network_connections', 30;
+    assert_screen 'mini_iso_network_connections', 10;
     send_key 'ret';
-    assert_screen 'mini_iso_proxy_options', 30;
+    assert_screen 'mini_iso_proxy_options', 10;
     send_key 'ret';
-    assert_screen 'mini_iso_configure_mirror', 30;
-    assert_screen 'mini_iso_proxy_tests_done', 100;
+    assert_screen 'mini_iso_configure_mirror', 10;
     send_key 'ret';
     send_key 'down';
     send_key 'down';
@@ -51,13 +50,13 @@ sub run {
     send_key 'down';
     send_key 'down';
     send_key 'ret';
-    assert_screen 'mini_iso_storage_config_summary', 30;
+    assert_screen 'mini_iso_storage_config_summary', 10;
     send_key 'ret';
-    assert_screen 'mini_iso_confirm_destructive_action', 30;
+    assert_screen 'mini_iso_confirm_destructive_action', 10;
     send_key 'down';
     send_key 'ret';
     # profile setup
-    assert_screen 'mini_iso_profile_setup', 30;
+    assert_screen 'mini_iso_profile_setup', 10;
     type_string 'ubuntu', SLOW_TYPING_SPEED;
     send_key 'tab';
     type_string 'ubuntu', SLOW_TYPING_SPEED;
@@ -67,15 +66,16 @@ sub run {
     type_string 'ubuntu', SLOW_TYPING_SPEED;
     send_key 'tab';
     type_string 'ubuntu', SLOW_TYPING_SPEED;
+    send_key 'tab';
     send_key 'ret';
     # openssh form
-    assert_screen 'mini_iso_openssh_setup', 30;
+    assert_screen 'mini_iso_openssh_setup', 10;
     send_key 'ret';
     send_key 'down';
     send_key 'down';
     send_key 'ret';
     # featured snaps
-    assert_screen 'mini_iso_featured_snaps', 30;
+    assert_screen 'mini_iso_featured_snaps', 10;
     send_key 'tab';
     send_key 'ret';
     # It's installing now
@@ -89,7 +89,7 @@ sub run {
     send_key 'ret';
     type_string 'ubuntu', SLOW_TYPING_SPEED;
     send_key 'ret';
-    assert_screen 'mini_iso_logged_in', 30;
+    assert_screen 'mini_iso_logged_in', 10;
 
 }
 

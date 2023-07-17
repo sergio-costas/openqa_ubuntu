@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "mini_iso_logged_in"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 1,
+      "ypos": 97,
+      "width": 481,
+      "height": 22,
+      "type": "match"
+    }
+  ]
+}

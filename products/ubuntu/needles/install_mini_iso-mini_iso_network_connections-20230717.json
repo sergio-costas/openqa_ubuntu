@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "mini_iso_network_connections"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 73,
+      "ypos": 3,
+      "width": 880,
+      "height": 221,
+      "type": "match"
+    }
+  ]
+}

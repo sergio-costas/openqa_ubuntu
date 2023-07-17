@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "mini_iso_configure_mirror"
+  ],
+  "area": [
+    {
+      "xpos": 100,
+      "ypos": 123,
+      "width": 285,
+      "height": 28,
+      "type": "match"
+    }
+  ],
+  "properties": []
+}
