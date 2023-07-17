@@ -37,7 +37,7 @@
                 "mantic-mini-iso-amd64.iso": 20
             },
             "settings":{
-                "INSTALL_TYPE": "MINI"
+                "INSTALL_TYPE": "mini"
             }
         }
     }

@@ -28,6 +28,11 @@ if (check_var('INSTALL_TYPE', 'install')) {
     loadtest 'installation/install_alongside';
 }
 
+if (check_var('INSTALL_TYPE', 'mini')) {
+    loadtest 'installation/boot';
+    loadtest 'installation/install_mini_iso';
+}
+
 # Graphical Installation from the DVD
 # if (check_var('INSTALL_TYPE', 'install')) {
 #     loadtest 'installation/boot';
