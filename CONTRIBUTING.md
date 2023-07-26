@@ -111,6 +111,7 @@ When testing your own tests, this is the approach you should take, in order:
 8. Run your test, wait for failure, save the needles and retry until success.
 9. When you have a fully passing test, or want to save your progress needles wise, do:
 ```
+
 cd /path/to/this/repo/openqa_ubuntu/products/ubuntu/needles
 sudo rm ./*
 sudo su
@@ -121,4 +122,9 @@ cp -b ./* /path/to/this/repo/openqa_ubuntu/products/ubuntu/needles
 ```
 
 After this point, you can kill the containers with `kill_containers`.
-CRUCIAL NOTE: IF YOU KILL THE CONTAINERS BEFORE SAVING THE NEEDLES MANUALLY, YOU WILL LOSE THE NEEDLES.
+CRUCIAL NOTE: IF YOU KILL THE CONTAINERS BEFORE SAVING THE NEEDLES MANUALLY, YOU WILL LOSE THE NEEDLES. MAKE SURE YOU SAVE YOUR PROGRESS.
+
+## Summing up
+The best way I've found to write a test, is to do an install with an image with `virt-manager` or `virt-install`, note down all the steps of when you would need needles, when you'd need to send keys, when you'd need to type strings, when you'd need to click, etc. Then convert that list into a Perl script by copying a script under the `tests/` directory and altering it for your test.
+
+To use different `.iso`'s, please see how the mini iso test has been implemented in both `tests/installation/install_mini_iso.pm` and `templates.fif.json`.
