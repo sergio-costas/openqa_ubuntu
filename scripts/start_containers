@@ -24,7 +24,7 @@ done
 docker run -d --privileged --name $user-openqa_worker \
               --link $user-openqa_webui:openqa-webui \
               --volumes-from $user-openqa_webui \
-              binarysequence/openqa-worker_x86_64
+              binarysequence/openqa-worker-x86_64
 
 # restore kvm group
 chown root:kvm /dev/kvm
