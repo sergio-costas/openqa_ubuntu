@@ -3,17 +3,28 @@
 # user="generic"
 source ./env_vars
 
+# in the opensuse container, kvm group is 492
+chown root:492 /dev/kvm
+
 # Start the openQA Web Interface
 docker run -d --name $user-openqa_webui \
     -p $webport:80 -p $rsyncport:873 -p $sslport:443 \
     -v $user-Assets:/var/lib/openqa/share/factory -v $user-Tests:/var/lib/openqa/share/tests \
     binarysequence/openqa-webui
-
 # Generate fake key authentication
-sleep 5; curl -X POST http://localhost:$webport/login
-
+while true; do
+    curl --fail-with-body -X POST http://localhost:$webport/login > /dev/null 2>&1
+    if [[ $? -eq 0 ]]; then
+        break
+    fi
+    echo Failed to generate fake key authentication. Retrying.
+    sleep 1
+done
 # Start one worker
 docker run -d --privileged --name $user-openqa_worker \
               --link $user-openqa_webui:openqa-webui \
               --volumes-from $user-openqa_webui \
-              binarysequence/openqa-worker-x86_64
+              binarysequence/openqa-worker_x86_64
+
+# restore kvm group
+chown root:kvm /dev/kvm
