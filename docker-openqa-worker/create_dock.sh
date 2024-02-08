@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build --progress plain -t localbuntu/worker-x86_64 .
+docker build --no-cache -t localbuntu/worker-x86_64 .
