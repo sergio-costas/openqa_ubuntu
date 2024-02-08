@@ -9,7 +9,10 @@ You must have docker installed for this to work.
 curl -sSL https://get.docker.com/ | sudo sh
 ```
 
-kvm must also be working on your machine. As a hack, I run `sudo chmod 666 /dev/kvm`.
+kvm must also be working on your machine.
+
+First, create the openQA worker container by entering the `docker-openqa-worker` folder and running
+`sudo ./create_dock.sh`.
 
 There are scripts to help running the tests. Please run them from the `scripts` directory.
 

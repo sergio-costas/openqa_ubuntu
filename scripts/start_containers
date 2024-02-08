@@ -3,9 +3,6 @@
 # user="generic"
 source ./env_vars
 
-# in the opensuse container, kvm group is 492
-chown root:492 /dev/kvm
-
 # Start the openQA Web Interface
 docker run -d --name $user-openqa_webui \
     -p $webport:80 -p $rsyncport:873 -p $sslport:443 \
@@ -24,7 +21,4 @@ done
 docker run -d --privileged --name $user-openqa_worker \
               --link $user-openqa_webui:openqa-webui \
               --volumes-from $user-openqa_webui \
-              binarysequence/openqa-worker-x86_64
-
-# restore kvm group
-chown root:kvm /dev/kvm
+              localbuntu/worker-x86_64

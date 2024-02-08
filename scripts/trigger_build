@@ -8,4 +8,4 @@ source ./env_vars
 
 
 # sudo docker exec "${user}"-openqa_worker openqa-client --host http://openqa-webui isos post DISTRI=ubuntu VERSION="${release}" FLAVOR="${flavor}" ARCH="${arch}"
-sudo docker exec "${user}"-openqa_worker openqa-client --host http://openqa-webui isos post DISTRI=ubuntu VERSION=23.04 FLAVOR=desktop ARCH=amd64
+sudo docker exec "${user}"-openqa_worker openqa-cli api -X POST --host http://openqa-webui isos post DISTRI=ubuntu VERSION=23.04 FLAVOR=desktop ARCH=amd64
