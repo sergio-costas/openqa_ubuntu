@@ -14,30 +14,30 @@
         }
     },
     "Products":{
-        "mantic-mini-iso-amd64.iso":{
+        "ubuntu-core-desktop-22-amd64.iso":{
             "arch": "amd64",
             "distri": "ubuntu",
             "flavor": "desktop",
             "settings":{
-                "ISO": "mantic-mini-iso-amd64.iso"
+                "ISO": "ubuntu-core-desktop-22-amd64.iso"
             },
             "version": "23.04",
             "name": "group1"
         }
     },
     "Profiles":{
-        "mantic-mini-iso-amd64.iso":{
+        "ubuntu-core-desktop-22-amd64.iso":{
             "machine": "64bit",
-            "product": "mantic-mini-iso-amd64.iso"
+            "product": "ubuntu-core-desktop-22-amd64.iso"
         }
     },
     "TestSuites":{
         "install_test":{
             "profiles":{
-                "mantic-mini-iso-amd64.iso": 20
+                "ubuntu-core-desktop-22-amd64.iso": 20
             },
             "settings":{
-                "INSTALL_TYPE": "mini"
+                "INSTALL_TYPE": "coredesktop"
             }
         }
     }

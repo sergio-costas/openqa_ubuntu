@@ -218,19 +218,19 @@ sub is_kernel_test {
 {
     local $@;
 
-    eval 'use main_ltp;';
-    if ($@) {
-        bmwqemu::fctwarn("Failed to load main_ltp.pm:\n$@", 'main_common.pm');
-        eval q%
-            sub load_kernel_tests {
-                if (is_kernel_test())
-                {
-                    die "Can not run kernel tests because evaluating main_ltp.pm failed";
-                }
-                return 0;
-            }
-        %;
-    }
+    # eval 'use main_ltp;';
+    # if ($@) {
+    #     bmwqemu::fctwarn("Failed to load main_ltp.pm:\n$@", 'main_common.pm');
+    #     eval q%
+    #         sub load_kernel_tests {
+    #             if (is_kernel_test())
+    #             {
+    #                 die "Can not run kernel tests because evaluating main_ltp.pm failed";
+    #             }
+    #             return 0;
+    #         }
+    #     %;
+    # }
 }
 
 sub replace_opensuse_repos_tests {

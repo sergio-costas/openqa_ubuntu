@@ -1,0 +1,4 @@
+#!/bin/bash
+source ./env_vars
+
+sudo docker exec -it "${user}"-openqa_webui /bin/bash

@@ -32,6 +32,10 @@ if (check_var('INSTALL_TYPE', 'mini')) {
     loadtest 'installation/install_mini_iso';
 }
 
+if (check_var('INSTALL_TYPE', 'coredesktop')) {
+    loadtest 'installation/install_core_desktop';
+}
+
 # Graphical Installation from the DVD
 # if (check_var('INSTALL_TYPE', 'install')) {
 #     loadtest 'installation/boot';
