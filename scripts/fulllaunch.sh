@@ -1,9 +1,14 @@
 #!/bin/bash
 
-sudo ./kill_containers
-sudo ./start_containers
-sudo ./copy_resources_to_container /home/raster/workspace/ubuntu-core-desktop/ubuntu-core-desktop/ubuntu-core-desktop-22-amd64.iso
-sudo ./upload_template
-sudo ./trigger_build
+source env_vars
 
-# copy the created/modified needles
+echo "Killing old containers"
+sudo ./kill_containers
+echo "Launching new containers"
+sudo ./start_containers
+echo "Copying resources into the container"
+sudo ./copy_resources_to_container $ISO_FILE
+echo "Uploading the templates"
+sudo ./upload_template
+echo "Triggering build"
+sudo ./trigger_build

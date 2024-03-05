@@ -21,7 +21,8 @@ use constant SLOW_TYPING_SPEED => 13;
 
 sub run {
 
-    assert_screen 'core-desktop-grub', 20;
+    assert_screen 'ubuntu-logo', 30;
+    assert_screen 'installer', 60;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
     #assert_screen 'mini_iso_logged_in', 10;

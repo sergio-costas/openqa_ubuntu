@@ -47,10 +47,9 @@
                       settings => [
                         { key => "CDMODEL", value => "ide-cd" },
                         { key => "HDDSIZEGB", value => 25 },
-                        { key => "QEMUCPU", value => "Haswell-noTSX" },
                         { key => "QEMUCPUS", value => 1 },
                         { key => "QEMURAM", value => 2048 },
-                        { key => "QEMUVGA", value => "qxl" },
+                        { key => "QEMUVGA", value => "vmware" },
                         { key => "WORKER_CLASS", value => "qemu_x86_64" },
                       ],
                     },

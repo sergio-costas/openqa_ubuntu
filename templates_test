@@ -24,10 +24,6 @@
                     "value" => 25
                 },
                 {
-                    "key" => "QEMUCPU",
-                    "value" => "Haswell-noTSX"
-                },
-                {
                     "key" => "QEMUCPUS",
                     "value" => 1
                 },
@@ -37,7 +33,7 @@
                 },
                 {
                     "key" => "QEMUVGA",
-                    "value" => "qx1"
+                    "value" => "vmware"
                 },
                 {
                     "key" => "WORKER_CLASS",

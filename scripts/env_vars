@@ -2,3 +2,5 @@ export user="tim2"
 export webport="41"
 export rsyncport="873"
 export sslport="443"
+
+export ISO_FILE="/home/raster/workspace/ubuntu-core-desktop/ubuntu-core-desktop/ubuntu-core-desktop-22-amd64.iso"

@@ -5,10 +5,9 @@
             "settings":{
                 "CDMODEL": "ide-cd",
                 "HDDSIZEGB": 25,
-                "QEMUCPU": "Haswell-noTSX",
                 "QEMUCPUS": 2,
                 "QEMURAM": 6000,
-                "QEMUVGA": "qxl",
+                "QEMUVGA": "cirrus",
                 "WORKER_CLASS": "qemu_x86_64"
             }
         }
