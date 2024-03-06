@@ -26,5 +26,7 @@ docker run -d --privileged --name $user-openqa_worker \
               --volumes-from $user-openqa_webui \
               binarysequence/openqa-worker-x86_64
 
+docker cp ../OVMF.fd $user-openqa_worker:/tmp
+
 # restore kvm group
 chown root:kvm /dev/kvm

@@ -9,7 +9,8 @@
                 "QEMUCPUS": 2,
                 "QEMURAM": 6000,
                 "QEMUVGA": "cirrus",
-                "WORKER_CLASS": "qemu_x86_64"
+                "WORKER_CLASS": "qemu_x86_64",
+                "BIOS": "/tmp/OVMF.fd"
             }
         }
     },

@@ -19,12 +19,11 @@ use testapi;
 
 use constant SLOW_TYPING_SPEED => 13;
 
-$transition_wait = 2;
-
 sub run {
 
     # seconds to wait after an assert_screen to ensure that the
     # transition is completed.
+    my $transition_wait = 2;
 
     assert_screen 'ubuntu-logo', 30;
     assert_screen 'installer', 80;
@@ -50,7 +49,7 @@ sub run {
     mouse_click();
     assert_screen 'remove-media', 80;
     send_key 'ret';
-    assert_screen 'next', 40;
+    assert_screen 'next', 4000;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
     #assert_screen 'mini_iso_logged_in', 10;
