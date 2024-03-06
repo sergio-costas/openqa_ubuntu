@@ -1,0 +1,22 @@
+{
+  "tags": [
+    "install-complete"
+  ],
+  "area": [
+    {
+      "xpos": 449,
+      "ypos": 95,
+      "width": 117,
+      "height": 18,
+      "type": "match"
+    },
+    {
+      "xpos": 429,
+      "ypos": 379,
+      "width": 311,
+      "height": 22,
+      "type": "match"
+    }
+  ],
+  "properties": []
+}

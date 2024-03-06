@@ -2,8 +2,14 @@
 
 source env_vars
 
-echo "Killing old containers"
-sudo ./kill_containers
+sudo docker exec $user-openqa_worker ls > /dev/null
+if [ $? -eq 0 ]; then
+        echo Copying needles
+        ./copy_needles.sh
+        echo "Killing old containers"
+        sudo ./kill_containers
+fi
+
 echo "Launching new containers"
 sudo ./start_containers
 echo "Copying resources into the container"

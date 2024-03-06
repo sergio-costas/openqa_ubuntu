@@ -21,10 +21,35 @@ use constant SLOW_TYPING_SPEED => 13;
 
 sub run {
 
+    # seconds to wait after an assert_screen to ensure that the
+    # transition is completed.
+    $transition_wait = 2;
+
     assert_screen 'ubuntu-logo', 30;
-    assert_screen 'installer', 60;
+    assert_screen 'installer', 80;
+    sleep($transition_wait);
     mouse_set(802,565);
     mouse_click();
+    assert_screen 'keyboard-layout', 5;
+    sleep($transition_wait);
+    mouse_set(802,567);
+    mouse_click();
+    assert_screen 'erase-disk', 5;
+    sleep($transition_wait);
+    mouse_set(802,565);
+    mouse_click();
+    assert_screen 'do-install', 5;
+    sleep($transition_wait);
+    mouse_set(802,567);
+    mouse_click();
+    assert_screen 'installing-system', 5;
+    assert_screen 'install-complete', 180;
+    sleep($transition_wait);
+    mouse_set(580,390);
+    mouse_click();
+    assert_screen 'remove-media', 80;
+    send_key 'ret';
+    assert_screen 'next', 40;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
     #assert_screen 'mini_iso_logged_in', 10;

@@ -1,0 +1,22 @@
+{
+  "tags": [
+    "installing-system"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 246,
+      "ypos": 149,
+      "width": 411,
+      "height": 41,
+      "type": "match"
+    },
+    {
+      "xpos": 279,
+      "ypos": 544,
+      "width": 132,
+      "height": 26,
+      "type": "match"
+    }
+  ]
+}
