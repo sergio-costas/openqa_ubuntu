@@ -88,6 +88,10 @@ sub run {
     sleep($transition_wait);
     mouse_set(930,726);
     mouse_click();
+    assert_screen 'all-done', 5;
+    sleep($transition_wait);
+    mouse_set(930,726);
+    mouse_click();
     assert_screen 'next', 5;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
