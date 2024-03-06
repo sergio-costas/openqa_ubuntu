@@ -1,0 +1,29 @@
+{
+  "properties": [],
+  "tags": [
+    "config-keyboard-core"
+  ],
+  "area": [
+    {
+      "xpos": 449,
+      "ypos": 11,
+      "width": 124,
+      "height": 26,
+      "type": "match"
+    },
+    {
+      "xpos": 253,
+      "ypos": 60,
+      "width": 218,
+      "height": 33,
+      "type": "match"
+    },
+    {
+      "xpos": 258,
+      "ypos": 531,
+      "width": 125,
+      "height": 35,
+      "type": "match"
+    }
+  ]
+}

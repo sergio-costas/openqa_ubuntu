@@ -55,6 +55,17 @@ sub run {
     sleep($transition_wait);
     mouse_set(930,726);
     mouse_click();
+    assert_screen 'config-keyboard-core', 5;
+    sleep($transition_wait);
+    mouse_set(332,322);
+    mouse_click();
+    sleep($transition_wait);
+    mouse_set(930,726);
+    mouse_click();
+    assert_screen 'connect-network', 5;
+    sleep($transition_wait);
+    mouse_set(930,726);
+    mouse_click();
     assert_screen 'next', 5;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
