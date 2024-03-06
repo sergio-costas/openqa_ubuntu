@@ -1,0 +1,22 @@
+{
+  "properties": [],
+  "tags": [
+    "confirm-shutdown"
+  ],
+  "area": [
+    {
+      "xpos": 321,
+      "ypos": 313,
+      "width": 380,
+      "height": 88,
+      "type": "match"
+    },
+    {
+      "xpos": 567,
+      "ypos": 428,
+      "width": 104,
+      "height": 31,
+      "type": "match"
+    }
+  ]
+}

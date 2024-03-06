@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "shutdown-button-2"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 877,
+      "ypos": 51,
+      "width": 133,
+      "height": 54,
+      "type": "match"
+    }
+  ]
+}

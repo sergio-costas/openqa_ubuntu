@@ -100,6 +100,14 @@ sub run {
     sleep($transition_wait);
     mouse_set(973,70);
     mouse_click();
+    assert_screen 'select-shutdown', 5;
+    sleep($transition_wait);
+    mouse_set(682,259);
+    mouse_click();
+    assert_screen 'confirm-shutdown', 5;
+    sleep($transition_wait);
+    mouse_set(614,436);
+    mouse_click();
     assert_screen 'next', 100;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
