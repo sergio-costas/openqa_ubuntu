@@ -1,0 +1,29 @@
+{
+  "tags": [
+    "select-timezone"
+  ],
+  "area": [
+    {
+      "xpos": 435,
+      "ypos": 12,
+      "width": 150,
+      "height": 24,
+      "type": "match"
+    },
+    {
+      "xpos": 284,
+      "ypos": 221,
+      "width": 351,
+      "height": 248,
+      "type": "match"
+    },
+    {
+      "xpos": 534,
+      "ypos": 77,
+      "width": 87,
+      "height": 20,
+      "type": "match"
+    }
+  ],
+  "properties": []
+}
