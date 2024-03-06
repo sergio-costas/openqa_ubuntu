@@ -19,11 +19,12 @@ use testapi;
 
 use constant SLOW_TYPING_SPEED => 13;
 
+$transition_wait = 2;
+
 sub run {
 
     # seconds to wait after an assert_screen to ensure that the
     # transition is completed.
-    $transition_wait = 2;
 
     assert_screen 'ubuntu-logo', 30;
     assert_screen 'installer', 80;

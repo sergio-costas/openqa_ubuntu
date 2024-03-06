@@ -10,3 +10,4 @@ tar xvf ../products/ubuntu/needles.tar -C ../products/ubuntu/
 rm -f ../products/ubuntu/needles.tar
 mv ../products/ubuntu/var/lib/openqa/share/tests/ubuntu/products/ubuntu/needles ../products/ubuntu/
 rm -rf ../products/ubuntu/var
+rm -f ../products/ubuntu/needles/*~
