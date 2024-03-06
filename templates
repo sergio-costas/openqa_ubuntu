@@ -47,6 +47,7 @@
                       settings => [
                         { key => "CDMODEL", value => "ide-cd" },
                         { key => "HDDSIZEGB", value => 25 },
+                        { key => "QEMUCPU", value => "EPYC" },
                         { key => "QEMUCPUS", value => 1 },
                         { key => "QEMURAM", value => 2048 },
                         { key => "QEMUVGA", value => "vmware" },

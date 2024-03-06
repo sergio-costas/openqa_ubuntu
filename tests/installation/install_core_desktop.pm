@@ -23,6 +23,8 @@ sub run {
 
     assert_screen 'ubuntu-logo', 30;
     assert_screen 'installer', 60;
+    mouse_set(802,565);
+    mouse_click();
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
     #assert_screen 'mini_iso_logged_in', 10;

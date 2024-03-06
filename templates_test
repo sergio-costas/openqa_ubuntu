@@ -24,6 +24,10 @@
                     "value" => 25
                 },
                 {
+                    "key" => "QEMUCPU",
+                    "value" => "EPYC"
+                },
+                {
                     "key" => "QEMUCPUS",
                     "value" => 1
                 },

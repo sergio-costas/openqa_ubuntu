@@ -5,6 +5,7 @@
             "settings":{
                 "CDMODEL": "ide-cd",
                 "HDDSIZEGB": 25,
+                "QEMUCPU": "Opteron_G3",
                 "QEMUCPUS": 2,
                 "QEMURAM": 6000,
                 "QEMUVGA": "cirrus",
