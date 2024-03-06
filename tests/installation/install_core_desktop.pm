@@ -23,7 +23,7 @@ sub run {
 
     # seconds to wait after an assert_screen to ensure that the
     # transition is completed.
-    my $transition_wait = 3;
+    my $transition_wait = 4;
 
     assert_screen 'ubuntu-logo', 30;
     assert_screen 'installer', 80;
@@ -64,7 +64,7 @@ sub run {
     mouse_click();
     assert_screen 'connect-network', 5;
     sleep($transition_wait);
-    mouse_set(930,726);
+    mouse_set(930,728);
     mouse_click();
     assert_screen 'select-timezone', 5;
     sleep($transition_wait);
@@ -92,9 +92,13 @@ sub run {
     sleep($transition_wait);
     mouse_set(930,726);
     mouse_click();
-    assert_screen 'wait-desktop', 5;
+    assert_screen 'show-desktop', 40;
     sleep($transition_wait);
     mouse_set(950,12);
+    mouse_click();
+    assert_screen 'shutdown-button', 5;
+    sleep($transition_wait);
+    mouse_set(973,70);
     mouse_click();
     assert_screen 'next', 100;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
