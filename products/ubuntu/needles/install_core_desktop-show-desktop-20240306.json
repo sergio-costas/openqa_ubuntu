@@ -1,0 +1,29 @@
+{
+  "properties": [],
+  "area": [
+    {
+      "xpos": 930,
+      "ypos": 5,
+      "width": 84,
+      "height": 21,
+      "type": "match"
+    },
+    {
+      "xpos": 5,
+      "ypos": 4,
+      "width": 76,
+      "height": 21,
+      "type": "match"
+    },
+    {
+      "xpos": 9,
+      "ypos": 698,
+      "width": 51,
+      "height": 59,
+      "type": "match"
+    }
+  ],
+  "tags": [
+    "show-desktop"
+  ]
+}

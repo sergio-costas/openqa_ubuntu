@@ -92,7 +92,11 @@ sub run {
     sleep($transition_wait);
     mouse_set(930,726);
     mouse_click();
-    assert_screen 'next', 5;
+    assert_screen 'wait-desktop', 5;
+    sleep($transition_wait);
+    mouse_set(950,12);
+    mouse_click();
+    assert_screen 'next', 100;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
     #assert_screen 'mini_iso_logged_in', 10;
