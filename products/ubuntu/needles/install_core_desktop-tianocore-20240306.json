@@ -1,0 +1,15 @@
+{
+  "area": [
+    {
+      "xpos": 275,
+      "ypos": 246,
+      "width": 255,
+      "height": 112,
+      "type": "match"
+    }
+  ],
+  "tags": [
+    "tianocore"
+  ],
+  "properties": []
+}

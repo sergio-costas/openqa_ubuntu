@@ -1,0 +1,22 @@
+{
+  "properties": [],
+  "tags": [
+    "config-core"
+  ],
+  "area": [
+    {
+      "xpos": 245,
+      "ypos": 260,
+      "width": 540,
+      "height": 434,
+      "type": "match"
+    },
+    {
+      "xpos": 862,
+      "ypos": 694,
+      "width": 147,
+      "height": 64,
+      "type": "match"
+    }
+  ]
+}

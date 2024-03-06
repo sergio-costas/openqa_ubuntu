@@ -1,29 +1,29 @@
 {
   "properties": [],
-  "tags": [
-    "installer"
-  ],
   "area": [
     {
-      "xpos": 419,
+      "type": "match",
       "ypos": 91,
       "width": 187,
-      "height": 24,
-      "type": "match"
+      "xpos": 419,
+      "height": 24
     },
     {
-      "xpos": 220,
-      "ypos": 134,
-      "width": 373,
-      "height": 350,
-      "type": "match"
+      "ypos": 136,
+      "width": 406,
+      "xpos": 307,
+      "type": "match",
+      "height": 402
     },
     {
-      "xpos": 749,
+      "height": 43,
       "ypos": 544,
       "width": 112,
-      "height": 43,
+      "xpos": 749,
       "type": "match"
     }
+  ],
+  "tags": [
+    "installer"
   ]
 }

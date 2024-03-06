@@ -23,7 +23,7 @@ sub run {
 
     # seconds to wait after an assert_screen to ensure that the
     # transition is completed.
-    my $transition_wait = 2;
+    my $transition_wait = 3;
 
     assert_screen 'ubuntu-logo', 30;
     assert_screen 'installer', 80;
@@ -48,8 +48,14 @@ sub run {
     mouse_set(580,390);
     mouse_click();
     assert_screen 'remove-media', 80;
+    eject_cd;
+    sleep($transition_wait);
     send_key 'ret';
-    assert_screen 'next', 4000;
+    assert_screen 'config-core', 900;
+    sleep($transition_wait);
+    mouse_set(930,726);
+    mouse_click();
+    assert_screen 'next', 5;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
     #assert_screen 'mini_iso_logged_in', 10;
