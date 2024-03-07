@@ -18,68 +18,58 @@ use strict;
 use testapi;
 
 use constant SLOW_TYPING_SPEED => 13;
+use constant NEW_SLIDE_WAIT => 20;
+
+sub do_click_at {
+    my ($x, $y) = @_;
+    mouse_set($x, $y);
+    sleep(1);
+    mouse_click();
+}
 
 sub run {
-
-    # seconds to wait after an assert_screen to ensure that the
-    # transition is completed.
-    my $transition_wait = 3;
-    my $new_slide_wait = 10;
-
     assert_screen 'ubuntu-logo', 30;
     assert_screen 'installer', 80;
-    mouse_set(802,565);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'keyboard-layout', $new_slide_wait;
-    mouse_set(802,567);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'erase-disk', $new_slide_wait;
-    mouse_set(802,565);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'do-install', $new_slide_wait;
-    mouse_set(803,567);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'installing-system', $new_slide_wait;
+    do_click_at(802,565);
+    assert_screen 'keyboard-layout', NEW_SLIDE_WAIT;
+    do_click_at(802,567);
+    assert_screen 'erase-disk', NEW_SLIDE_WAIT;
+    do_click_at(802,565);
+    assert_screen 'do-install', NEW_SLIDE_WAIT;
+    do_click_at(803,567);
+    assert_screen 'installing-system', NEW_SLIDE_WAIT;
     assert_screen 'install-complete', 400;
-    mouse_set(580,390);
-    sleep($transition_wait);
-    mouse_click();
+    do_click_at(580,390);
     assert_screen 'remove-media', 80;
     eject_cd;
-    sleep($transition_wait);
+    sleep(2);
     send_key 'ret';
     # this is the first boot, where the filesystem is resized
     # and all the snaps are installed
+    assert_screen 'booting-core', 100;
+    # if we detect that it is running, we wait until everything
+    # is done.
     assert_screen 'config-core', 3000;
-    mouse_set(930,726);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'config-keyboard-core', $new_slide_wait;
-    mouse_set(332,322);
-    sleep($transition_wait);
-    mouse_click();
-    sleep(1);
-    mouse_set(930,726);
-    mouse_click();
-    assert_screen 'connect-network', $new_slide_wait;
-    mouse_set(930,728);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'select-timezone', $new_slide_wait;
-    mouse_set(464,352);
-    sleep($transition_wait);
-    mouse_click();
-    sleep(1);
-    mouse_set(930,726);
-    mouse_click();
-    assert_screen 'user-account', $new_slide_wait;
-    mouse_set(58,92);
-    sleep($transition_wait);
-    mouse_click();
+    do_click_at(930,726);
+    assert_screen 'config-keyboard-core', NEW_SLIDE_WAIT;
+    # click on the keyboard list...
+    do_click_at(332,322);
+    # and press 'e' seven times to select "english (US)" keyboard
+    send_key 'e';
+    send_key 'e';
+    send_key 'e';
+    send_key 'e';
+    send_key 'e';
+    send_key 'e';
+    send_key 'e';
+    do_click_at(930,726);
+    assert_screen 'connect-network', NEW_SLIDE_WAIT;
+    do_click_at(930,728);
+    assert_screen 'select-timezone', NEW_SLIDE_WAIT;
+    do_click_at(464,352);
+    do_click_at(930,726);
+    assert_screen 'user-account', NEW_SLIDE_WAIT;
+    do_click_at(58,92);
     type_string 'username', SLOW_TYPING_SPEED;
     send_key 'tab';
     send_key 'tab';
@@ -88,33 +78,22 @@ sub run {
     send_key 'tab';
     send_key 'tab';
     type_string 'apassword', SLOW_TYPING_SPEED;
-    mouse_set(930,726);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'all-done', $new_slide_wait;
-    mouse_set(930,726);
-    sleep($transition_wait);
-    mouse_click();
+    do_click_at(930,726);
+    assert_screen 'all-done', NEW_SLIDE_WAIT;
+    do_click_at(930,726);
     assert_screen 'show-desktop', 40;
-    mouse_set(950,12);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'reboot-button', $new_slide_wait;
-    mouse_set(973,70);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'select-reboot', $new_slide_wait;
-    mouse_set(682,229);
-    sleep($transition_wait);
-    mouse_click();
-    assert_screen 'confirm-reboot', $new_slide_wait;
-    mouse_set(614,436);
-    sleep($transition_wait);
-    mouse_click();
+    do_click_at(950,12);
+    assert_screen 'reboot-button', NEW_SLIDE_WAIT;
+    do_click_at(973,70);
+    assert_screen 'select-reboot', NEW_SLIDE_WAIT;
+    do_click_at(682,229);
+    assert_screen 'confirm-reboot', NEW_SLIDE_WAIT;
+    do_click_at(614,436);
     assert_screen 'login', 60;
     send_key 'ret';
     sleep(1);
     type_string 'apassword', SLOW_TYPING_SPEED;
+    sleep(3);
     send_key 'ret';
     assert_screen 'next', 2000;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
