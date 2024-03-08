@@ -13,16 +13,7 @@ echo Copying resources
 BASE_FOLDER=/var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/
 mkdir -p $BASE_FOLDER
 
-for f in ../*; do
-    if [ "$f" == "../scripts" ]; then
-        continue
-    fi
-    cp -b -r "$f" $BASE_FOLDER
-done
-echo Creating hard disk file
-rm -f $BASE_FOLDER/scripts/raid/l1
-mkdir -p $BASE_FOLDER/scripts/raid/
-qemu-img create $BASE_FOLDER/scripts/raid/l1 $HARD_DISK_SIZE
+cp -b -r ../ $BASE_FOLDER
 echo Copying $path_to_iso
 cp -b $path_to_iso /var/lib/docker/volumes/"${user}"-Assets/_data/iso/
 chown -R 496:nogroup /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/products/ubuntu/needles

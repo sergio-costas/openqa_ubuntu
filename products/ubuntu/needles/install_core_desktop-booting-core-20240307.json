@@ -1,0 +1,15 @@
+{
+  "tags": [
+    "booting-core"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 218,
+      "ypos": 78,
+      "width": 605,
+      "height": 355,
+      "type": "match"
+    }
+  ]
+}
