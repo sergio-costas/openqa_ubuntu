@@ -53,16 +53,11 @@ sub run {
     assert_screen 'config-core', 3000;
     do_click_at(930,726);
     assert_screen 'config-keyboard-core', NEW_SLIDE_WAIT;
-    # click on the keyboard list...
-    # do_click_at(332,322);
-    # sleep(NEW_SLIDE_WAIT);
-    # # move 25 times the scroll wheel down to select "english (US)" keyboard
-    # for (my $counter=0; $counter<25; $counter++) {
-    #     mouse_click(5);
-    #     Time::HiRes::sleep(0.2);
-    # }
-    # do_click_at(332,322);
-    # sleep(NEW_SLIDE_WAIT);
+    # move 6 times the scroll wheel down to select "english (US)" keyboard
+    for (my $counter=0; $counter<6; $counter++) {
+        do_click_at(755, 336 + $counter);
+    }
+    do_click_at(332,322);
     do_click_at(930,726);
     assert_screen 'connect-network', NEW_SLIDE_WAIT;
     do_click_at(930,728);
@@ -93,11 +88,11 @@ sub run {
     assert_screen 'login', 60;
     send_key 'ret';
     assert_screen 'wait-for-password', NEW_SLIDE_WAIT;
-    do_click_at(632, 480);
-    do_click_at(600, 480);
     type_string 'apassword', SLOW_TYPING_SPEED;
-    sleep(1);
     send_key 'ret';
+    assert_screen 'show-full-desktop', NEW_SLIDE_WAIT;
+    # launch Firefox
+    do_click_at(30,70);
     assert_screen 'next', 2000;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
