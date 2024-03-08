@@ -16,6 +16,7 @@
 use base 'basetest';
 use strict;
 use testapi;
+use Time::HiRes;
 
 use constant SLOW_TYPING_SPEED => 13;
 use constant NEW_SLIDE_WAIT => 20;
@@ -53,15 +54,15 @@ sub run {
     do_click_at(930,726);
     assert_screen 'config-keyboard-core', NEW_SLIDE_WAIT;
     # click on the keyboard list...
-    do_click_at(332,322);
-    # and press 'e' seven times to select "english (US)" keyboard
-    send_key 'e';
-    send_key 'e';
-    send_key 'e';
-    send_key 'e';
-    send_key 'e';
-    send_key 'e';
-    send_key 'e';
+    # do_click_at(332,322);
+    # sleep(NEW_SLIDE_WAIT);
+    # # move 25 times the scroll wheel down to select "english (US)" keyboard
+    # for (my $counter=0; $counter<25; $counter++) {
+    #     mouse_click(5);
+    #     Time::HiRes::sleep(0.2);
+    # }
+    # do_click_at(332,322);
+    # sleep(NEW_SLIDE_WAIT);
     do_click_at(930,726);
     assert_screen 'connect-network', NEW_SLIDE_WAIT;
     do_click_at(930,728);
@@ -91,9 +92,11 @@ sub run {
     do_click_at(614,436);
     assert_screen 'login', 60;
     send_key 'ret';
-    sleep(1);
+    assert_screen 'wait-for-password', NEW_SLIDE_WAIT;
+    do_click_at(632, 480);
+    do_click_at(600, 480);
     type_string 'apassword', SLOW_TYPING_SPEED;
-    sleep(3);
+    sleep(1);
     send_key 'ret';
     assert_screen 'next', 2000;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;

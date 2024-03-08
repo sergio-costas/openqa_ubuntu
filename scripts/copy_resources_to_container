@@ -5,14 +5,28 @@ source ./env_vars
 path_to_iso=$1
 
 while [ ! -d "/var/lib/docker/volumes/${user}-Tests" ]; do
-    sleep 3
+    echo waiting for docker volume to be available
+    sleep 1
 done
 
-mkdir -p /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu
+echo Copying resources
+BASE_FOLDER=/var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/
+mkdir -p $BASE_FOLDER
 
-cp -b -r ../ /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/
+for f in ../*; do
+    if [ "$f" == "../scripts" ]; then
+        continue
+    fi
+    cp -b -r "$f" $BASE_FOLDER
+done
+echo Creating hard disk file
+rm -f $BASE_FOLDER/scripts/raid/l1
+mkdir -p $BASE_FOLDER/scripts/raid/
+qemu-img create $BASE_FOLDER/scripts/raid/l1 $HARD_DISK_SIZE
+echo Copying $path_to_iso
 cp -b $path_to_iso /var/lib/docker/volumes/"${user}"-Assets/_data/iso/
 chown -R 496:nogroup /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/products/ubuntu/needles
 chmod -R 777 /var/lib/docker/volumes/"${user}"-Assets/_data/
+echo Loading templates
 ./fifloader.py -w ../templates.fif.json --filename /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/templates
 # ../fifloader.py --no-validate -w ../templates.fif.json --filename /var/lib/docker/volumes/"${user}"-Tests/_data/ubuntu/templates

@@ -4,3 +4,5 @@ export rsyncport="873"
 export sslport="443"
 
 export ISO_FILE="/home/raster/workspace/ubuntu-core-desktop/ubuntu-core-desktop/ubuntu-core-desktop-22-amd64.iso"
+
+export HARD_DISK_SIZE="21G"
