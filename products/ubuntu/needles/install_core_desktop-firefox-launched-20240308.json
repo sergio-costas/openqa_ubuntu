@@ -1,0 +1,22 @@
+{
+  "tags": [
+    "firefox-launched"
+  ],
+  "properties": [],
+  "area": [
+    {
+      "xpos": 74,
+      "ypos": 35,
+      "width": 270,
+      "height": 38,
+      "type": "match"
+    },
+    {
+      "xpos": 1,
+      "ypos": 36,
+      "width": 66,
+      "height": 73,
+      "type": "match"
+    }
+  ]
+}
