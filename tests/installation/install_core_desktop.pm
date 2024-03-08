@@ -53,12 +53,12 @@ sub run {
     assert_screen 'config-core', 3000;
     do_click_at(930,726);
     assert_screen 'config-keyboard-core', NEW_SLIDE_WAIT;
-    # move 6 times the scroll wheel down to select "english (US)" keyboard
-    for (my $counter=0; $counter<6; $counter++) {
+    # move 5 times the scroll wheel down to select "english (US)" keyboard
+    for (my $counter=0; $counter<5; $counter++) {
         mouse_set(753, 336 + $counter);
         mouse_click();
     }
-    do_click_at(332,292);
+    do_click_at(332,322);
     do_click_at(930,726);
     assert_screen 'connect-network', NEW_SLIDE_WAIT;
     do_click_at(930,728);
@@ -94,7 +94,7 @@ sub run {
     assert_screen 'show-full-desktop', NEW_SLIDE_WAIT;
     # launch Firefox
     do_click_at(30,70);
-    assert_screen 'firefox-launcher', NEW_SLIDE_WAIT;
+    assert_screen 'firefox-launched', NEW_SLIDE_WAIT;
     #type_string 'ubuntu', SLOW_TYPING_SPEED;
     #send_key 'ret';
     #assert_screen 'mini_iso_logged_in', 10;
